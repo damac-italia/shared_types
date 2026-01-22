@@ -1,0 +1,12 @@
+[package]
+name = "shared_types"
+version = "0.1.0"
+edition = "2024"
+authors = ["Antonio Masala <antonio@damac.it>"]
+description = "Shared types between microservices"
+license = "MIT"
+repository = "https://github.com/damac-italia/shared_types"
+
+[dependencies]
+html-escape = "0.2.13"
+serde = { version = "1.0.149", features = ["derive"] }
