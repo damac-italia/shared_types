@@ -1,3 +1,3 @@
-pub mod telegram_queue_message;
+pub mod telegram;
 
-pub use telegram_queue_message::TelegramQueueMessage;
+pub use telegram::{TelegramQueueMessage, MessageStatus, TelegramMessageBuilder};
