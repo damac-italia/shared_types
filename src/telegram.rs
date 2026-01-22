@@ -171,15 +171,15 @@ impl TelegramMessageBuilder {
 #[macro_export]
 macro_rules! telegram_msg {
     (chat_id: $chat_id:expr, status: $status:ident, job: $job:expr, content: $($arg:tt)*) => {
-        $crate::telegram_queue_message::TelegramMessageBuilder::new($chat_id)
-            .status($crate::telegram_queue_message::MessageStatus::$status)
+        $crate::telegram::TelegramMessageBuilder::new($chat_id)
+            .status($crate::telegram::MessageStatus::$status)
             .job_name($job)
             .content(format!($($arg)*))
             .build()
     };
     (chat_id: $chat_id:expr, status: $status:ident, job: $job:expr, force_send: $force_send:expr, content: $($arg:tt)*) => {
-        $crate::telegram_queue_message::TelegramMessageBuilder::new($chat_id)
-            .status($crate::telegram_queue_message::MessageStatus::$status)
+        $crate::telegram::TelegramMessageBuilder::new($chat_id)
+            .status($crate::telegram::MessageStatus::$status)
             .job_name($job)
             .content(format!($($arg)*))
             .force_send($force_send)
